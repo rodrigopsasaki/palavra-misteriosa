@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block body %}
+  <div class="container" style="margin-top: 10px">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><b>Palavras possíveis</b></h3>
+      </div>
+      <ul class="list-group">
+        {% for palavra in palavras %}
+        <li class="list-group-item"><b>{{palavra}}</b></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
