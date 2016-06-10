@@ -1,1 +1,1 @@
-web: gunicorn palavra:app
+web: gunicorn app:app
