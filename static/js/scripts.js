@@ -4,8 +4,26 @@ $(document).ready(function(){
     var limit  = parseInt($(this).attr('maxlength'));
     var length = $(this).val().length;
     if(length == limit){
-      var inputs = $(this).closest('form').find(':input');
-      inputs.eq( inputs.index(this)+ 1 ).focus();
+      moveToNextInput(this);
+    }
+  });
+
+  $(".letra").keydown(function(e){
+    if ((e.which == 8 || e.which == 46) && $(this).val() =='') {
+      moveToPreviousInput(this);
     }
   });
 });
+
+function moveToPreviousInput(input){
+  moveToInput(input, -1)
+}
+
+function moveToNextInput(input){
+  moveToInput(input, 1)
+}
+
+function moveToInput(input, i){
+  var inputs = $(input).closest('form').find(':input');
+  inputs.eq( inputs.index(input) + i ).focus();
+}
