@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  // go to next input when the current one is filled
   $(".letra").keyup(function() {
     $(this).val($(this).val().toUpperCase());
     var limit  = parseInt($(this).attr('maxlength'));
@@ -8,6 +10,7 @@ $(document).ready(function(){
     }
   });
 
+  // go back to the previous input if you hit backspace on an empty input
   $(".letra").keydown(function(e){
     if ((e.which == 8 || e.which == 46) && $(this).val() =='') {
       moveToPreviousInput(this);
