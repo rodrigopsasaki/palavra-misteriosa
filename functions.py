@@ -10,6 +10,6 @@ def match(p1, p2):
 
 def palavras_possiveis(letras):
     print letras
-    palavras  = open('palavras_10.txt').read().split('\n')
+    palavras  = open('static/resources/palavras_10.txt').read().split('\n')
     print len(palavras)
     return (palavra for palavra in palavras if match(letras, palavra))
