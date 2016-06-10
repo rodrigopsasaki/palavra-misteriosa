@@ -9,7 +9,7 @@ def match(p1, p2):
                 return False
 
 def palavras_possiveis(letras):
-    print letras
-    palavras  = open('static/resources/palavras_10.txt').read().split('\n')
-    print len(palavras)
-    return (palavra for palavra in palavras if match(letras, palavra))
+    palavras  = open('static/resources/palavras_10.txt')
+    for palavra in palavras:
+        if match(letras, palavra):
+            yield palavra
