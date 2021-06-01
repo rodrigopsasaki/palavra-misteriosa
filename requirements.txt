@@ -9,5 +9,5 @@ MarkupSafe==0.23
 requests==2.2.1
 rsa==3.2
 six==1.5.2
-urllib3==1.7.1
+urllib3==1.26.5
 virtualenv==15.0.2
